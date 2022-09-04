@@ -382,6 +382,11 @@ extern "C" {
 #define LANG_KEY_DISCONNECT_PROBE             "label_disconnect_probe:"
 #define LANG_KEY_CALIBRATION                  "label_calibration:"
 
+//Custom CNC
+#define LANG_KEY_ZERO_XY                       "label_zero_xy:"
+#define LANG_KEY_ZERO_Z0                       "label_zero_z0:"
+#define LANG_KEY_ZERO_Z0dot5                   "label_zero_z0dot5:"
+
 #ifdef __cplusplus
 }
 #endif

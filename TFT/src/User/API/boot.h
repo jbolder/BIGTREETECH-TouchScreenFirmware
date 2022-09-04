@@ -12,13 +12,13 @@ extern "C" {
 #define W25QXX_SECTOR_SIZE (0x1000)  // 4096-4K
 
 #ifndef LOGO_MAX_SIZE
-  #define LOGO_MAX_SIZE            0x4B000
+  #define LOGO_MAX_SIZE            0x4A000
   #define WORD_UNICODE_SIZE       0x480000
   #define BYTE_ASCII_SIZE           0x1000
   #define LARGE_FONT_SIZE           0x3000
   #define _8X16_FONT_SIZE           0x1000
   #define FLASH_SIGN_SIZE           0x1000  // store status of last font/icon/config update
-  #define LANGUAGE_SIZE            0x15000  // Language pack size
+  #define LANGUAGE_SIZE            0x16000  // Language pack size
   #define STRINGS_STORE_MAX_SIZE    0x1000  // label strings max size
   #define PREHEAT_STORE_MAX_SIZE    0x1000  // preheat setting max size
   #define PRINT_GCODES_MAX_SIZE     0x5000  // start/end/cancel gcodes max size

@@ -381,4 +381,9 @@ X_WORD (MESH_VALID)
 X_WORD (CONNECT_PROBE)
 X_WORD (DISCONNECT_PROBE)
 X_WORD (CALIBRATION)
+
+//Custom CNC commands
+X_WORD (ZERO_XY)
+X_WORD (ZERO_Z0)
+X_WORD (ZERO_Z0dot5)
 // After changing/adding/removing a word, change the LANGUAGE_FLASH_SIGN in Settings.h

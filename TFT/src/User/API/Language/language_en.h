@@ -375,4 +375,9 @@
     #define STRING_DISCONNECT_PROBE       "Make sure you have disconnected probe before using this feature."
     #define STRING_CALIBRATION            "Calibrate"
 
+//Custom commands CNC
+    #define STRING_ZERO_XY                   "Zero XY"
+    #define STRING_ZERO_Z0                   "Zero Z"
+    #define STRING_ZERO_Z0dot5               "Set Z 0.5"
+
 #endif

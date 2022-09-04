@@ -148,4 +148,9 @@ X_ICON (MESH_EDITOR)
 X_ICON (BRIGHTNESS)
 X_ICON (MESH_VALID)
 X_ICON (DELTA_CALIBRATE)
+
+//Custom CNC commands
+X_ICON (ZERO_XY)
+X_ICON (ZERO_Z0dot5)
+X_ICON (ZERO_Z0)
 // After changing/adding/removing an icon, change the ICON_FLASH_SIGN in Settings.h
