@@ -386,4 +386,7 @@ X_WORD (CALIBRATION)
 X_WORD (ZERO_XY)
 X_WORD (ZERO_Z0)
 X_WORD (ZERO_Z0dot5)
+X_WORD (PROBE_Z)
+X_WORD (HOME_XYZ)
+
 // After changing/adding/removing a word, change the LANGUAGE_FLASH_SIGN in Settings.h

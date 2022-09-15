@@ -386,6 +386,9 @@ extern "C" {
 #define LANG_KEY_ZERO_XY                       "label_zero_xy:"
 #define LANG_KEY_ZERO_Z0                       "label_zero_z0:"
 #define LANG_KEY_ZERO_Z0dot5                   "label_zero_z0dot5:"
+#define LANG_KEY_PROBE_Z                       "label_probe_z:"
+#define LANG_KEY_HOME_XYZ                      "label_home_xyz:"
+
 
 #ifdef __cplusplus
 }

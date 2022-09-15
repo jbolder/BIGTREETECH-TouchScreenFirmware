@@ -379,5 +379,8 @@
     #define STRING_ZERO_XY                   "Zero XY"
     #define STRING_ZERO_Z0                   "Zero Z"
     #define STRING_ZERO_Z0dot5               "Set Z 0.5"
+    #define STRING_PROBE_Z                   "Probe Z"
+    #define STRING_HOME_XYZ                  "Home XYZ"
+
 
 #endif

@@ -14,10 +14,10 @@ const MENUITEMS homeItems = {
   LABEL_HOME,
   // icon                          label
   {
-    {ICON_HOME,                    LABEL_HOME},
-    {ICON_X_HOME,                  LABEL_X},
-    {ICON_Y_HOME,                  LABEL_Y},
-    {ICON_Z_HOME,                  LABEL_Z},
+    {ICON_HOME,                    LABEL_HOME_XYZ},
+    {ICON_NULL,                    LABEL_NULL},
+    {ICON_BLTOUCH_DEPLOY,          LABEL_PROBE_Z},
+    {ICON_STOP,                    LABEL_STOP},
     {ICON_ZERO_XY,                 LABEL_ZERO_XY},
     {ICON_ZERO_Z0,                 LABEL_ZERO_Z0},
     {ICON_ZERO_Z0dot5,             LABEL_ZERO_Z0dot5},
@@ -67,9 +67,10 @@ void menuHome(void)
     switch (key_num)
     {
       case KEY_ICON_0: storeCmd("G28\n");   break;
-      case KEY_ICON_1: storeCmd("G28 X\n"); break;
-      case KEY_ICON_2: storeCmd("G28 Y\n"); break;
-      case KEY_ICON_3: storeCmd("G28 Z\n"); break;
+      //case KEY_ICON_1: storeCmd("G28 X\n"); break;
+      case KEY_ICON_2: storeCmd("G38.2 Z0\n"); break;
+      case KEY_ICON_3: Serial_Puts(SERIAL_PORT, "M410\n"); break;
+      
 
       case KEY_ICON_4: storeCmd("G92 X0 Y0\n"); break;
       case KEY_ICON_5: storeCmd("G92 Z0 \n"); break;
