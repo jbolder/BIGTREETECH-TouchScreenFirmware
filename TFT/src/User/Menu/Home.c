@@ -15,7 +15,7 @@ const MENUITEMS homeItems = {
   // icon                          label
   {
     {ICON_HOME,                    LABEL_HOME_XYZ},
-    {ICON_NULL,                    LABEL_NULL},
+    {ICON_Z_HOME,                  LABEL_Z},
     {ICON_BLTOUCH_DEPLOY,          LABEL_PROBE_Z},
     {ICON_STOP,                    LABEL_STOP},
     {ICON_ZERO_XY,                 LABEL_ZERO_XY},
@@ -67,8 +67,8 @@ void menuHome(void)
     switch (key_num)
     {
       case KEY_ICON_0: storeCmd("G28\n");   break;
-      //case KEY_ICON_1: storeCmd("G28 X\n"); break;
-      case KEY_ICON_2: storeCmd("G38.2 Z0\n"); break;
+      case KEY_ICON_1: storeCmd("G28 Z\n"); break;
+      case KEY_ICON_2: storeCmd("G38.2 Z-100\n"); break;
       case KEY_ICON_3: Serial_Puts(SERIAL_PORT, "M410\n"); break;
       
 
