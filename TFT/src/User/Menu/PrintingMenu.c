@@ -487,7 +487,7 @@ void menuPrinting(void)
       {ICON_NULL,                    LABEL_NULL},
       {ICON_NULL,                    LABEL_NULL},
       {ICON_NULL,                    LABEL_NULL},
-      {ICON_NULL,                    LABEL_BABYSTEP},
+      {ICON_STOP,                    LABEL_STOP},
       {ICON_MORE,                    LABEL_MORE},
       {ICON_STOP,                    LABEL_EMERGENCYSTOP},
     }
@@ -700,8 +700,30 @@ void menuPrinting(void)
         }
         break;
 
-      case PS_KEY_7:
-        OPEN_MENU(menuBabystep);
+      case PS_KEY_7: // stop
+        
+          if (lastPrinting == true)  // if printing
+        { // Stop button
+          if (isRemoteHostPrinting())
+          {
+            addToast(DIALOG_TYPE_ERROR, (char *)textSelect(LABEL_BUSY));
+          }
+          else
+          {
+            setDialogText(LABEL_WARNING, LABEL_STOP_PRINT, LABEL_CONFIRM, LABEL_CANCEL);
+            showDialog(DIALOG_TYPE_ALERT, printAbort, NULL, NULL);
+          }
+        }
+        else
+        { // Back button
+          // in case the print was started from menuPrintFromSource menu,
+          // remove the filename from path to allow the files scanning from its folder avoiding a scanning error message
+          exitFolder();
+
+          CLOSE_MENU();
+        }
+
+
         break;
 
       case PS_KEY_8:
