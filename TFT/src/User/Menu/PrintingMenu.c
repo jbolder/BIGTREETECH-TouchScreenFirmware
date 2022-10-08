@@ -730,8 +730,23 @@ void menuPrinting(void)
         OPEN_MENU(menuMore);
         break;
 
-      case PS_KEY_9: // Emergency stop
-        Serial_Puts(SERIAL_PORT, "M112\n");        
+      case PS_KEY_9: // Emergency stop          
+
+        if (lastPrinting == true)  // if printing
+        { // Emergency stop button
+          Serial_Puts(SERIAL_PORT, "M112\n");  
+        }
+        else
+        { // Back button
+          // in case the print was started from menuPrintFromSource menu,
+          // remove the filename from path to allow the files scanning from its folder avoiding a scanning error message
+          exitFolder();
+
+          CLOSE_MENU();
+        }
+
+        
+           
         break;
 
       case PS_KEY_INFOBOX:
