@@ -9,13 +9,9 @@ void menuMain(void)
     LABEL_MAINMENU,
     // icon                          label
     {
-      {ICON_HEAT_FAN,                LABEL_UNIFIEDHEAT},
+      {ICON_HOME,                    LABEL_HOME},
+      {ICON_MOVE,                    LABEL_MOVE},
       {ICON_HOME_MOVE,               LABEL_UNIFIEDMOVE},
-      #ifdef LOAD_UNLOAD_M701_M702
-        {ICON_EXTRUDE,                 LABEL_LOAD_UNLOAD_SHORT},
-      #else
-        {ICON_EXTRUDE,                 LABEL_EXTRUDE},
-      #endif
       {ICON_STOP,                    LABEL_EMERGENCYSTOP},
       {ICON_GCODE,                   LABEL_TERMINAL},
       {ICON_CUSTOM,                  LABEL_CUSTOM},
@@ -45,19 +41,15 @@ void menuMain(void)
     switch (key_num)
     {
       case KEY_ICON_0:
-        OPEN_MENU(menuUnifiedHeat);
+        OPEN_MENU(menuHome);
         break;
 
       case KEY_ICON_1:
-        OPEN_MENU(menuUnifiedMove);
+         OPEN_MENU(menuMove);
         break;
 
       case KEY_ICON_2:
-        #ifdef LOAD_UNLOAD_M701_M702
-          OPEN_MENU(menuLoadUnload);
-        #else
-          OPEN_MENU(menuExtrude);
-        #endif
+         OPEN_MENU(menuUnifiedMove);
         break;
 
       case KEY_ICON_3:
