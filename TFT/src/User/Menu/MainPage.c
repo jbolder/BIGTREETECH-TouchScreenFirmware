@@ -11,7 +11,7 @@ void menuMain(void)
     {
       {ICON_HOME,                    LABEL_HOME},
       {ICON_MOVE,                    LABEL_MOVE},
-      {ICON_HOME_MOVE,               LABEL_UNIFIEDMOVE},
+      {ICON_DISABLE_STEPPERS,        LABEL_DISABLE_STEPPERS},
       {ICON_STOP,                    LABEL_EMERGENCYSTOP},
       {ICON_GCODE,                   LABEL_TERMINAL},
       {ICON_CUSTOM,                  LABEL_CUSTOM},
@@ -48,8 +48,8 @@ void menuMain(void)
          OPEN_MENU(menuMove);
         break;
 
-      case KEY_ICON_2:
-         OPEN_MENU(menuUnifiedMove);
+      case KEY_ICON_2: //Disable steppers
+         storeCmd("M84\n");
         break;
 
       case KEY_ICON_3:
